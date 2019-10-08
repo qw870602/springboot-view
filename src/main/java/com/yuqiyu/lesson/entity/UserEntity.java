@@ -1,4 +1,4 @@
-package com.yuqiyu.lessonOne.entity;
+package com.yuqiyu.lesson.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

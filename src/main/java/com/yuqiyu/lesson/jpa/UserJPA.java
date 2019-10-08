@@ -1,6 +1,6 @@
-package com.yuqiyu.lessonOne.jpa;
+package com.yuqiyu.lesson.jpa;
 
-import com.yuqiyu.lessonOne.entity.UserEntity;
+import com.yuqiyu.lesson.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
