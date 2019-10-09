@@ -20,10 +20,10 @@ public class UserController {
     @Autowired
     private UserJPA userJPA;
 
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
-    }
+//    @RequestMapping("/index")
+//    public String index(){
+//        return "index";
+//    }
     @RequestMapping(value = "/list")
     public List<UserEntity> list(){
         return userJPA.findAll();

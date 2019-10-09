@@ -1,7 +1,8 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #mysql中""和Null不是一回事
     url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&characterEncoding=utf8
     username: root
     password: 123456
@@ -30,3 +31,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp

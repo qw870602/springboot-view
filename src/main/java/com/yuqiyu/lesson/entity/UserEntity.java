@@ -26,6 +26,12 @@ public class UserEntity implements Serializable {
     @Column(name="t_address")
     private String address;
 
+    @Column(name="flag")
+    private boolean flag;
+
+    @Column(name="t_pwd")
+    private String pwd;
+
     public Long getId() {
         return id;
     }
@@ -56,5 +62,21 @@ public class UserEntity implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 }
