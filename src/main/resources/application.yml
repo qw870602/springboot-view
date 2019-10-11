@@ -35,3 +35,17 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  #解决response返回中文乱码
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  #文件上传大小限制
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+#屏蔽日志off,或者设置对应包日志级别
+logging:
+  level:
+    com.yuqiyu.lesson.controller: info
