@@ -38,12 +38,17 @@ public class IndexController {
     public String login_view(){
         return "login";
     }
+    @RequestMapping("/main")
+    public String main(){
+        return "main";
+    }
     @RequestMapping("/index")
+    @ResponseBody
     public String index(){
-        logger.debug("访问了debug方法");
-        logger.info("访问了info方法");
-        logger.error("访问了error方法");
-        return "index";
+//        logger.debug("访问了debug方法");
+//        logger.info("访问了info方法");
+//        logger.error("访问了error方法");
+        return "get index success";
     }
     @RequestMapping("/age")
     @ResponseBody
