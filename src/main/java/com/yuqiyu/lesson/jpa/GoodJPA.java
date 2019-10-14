@@ -15,8 +15,8 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
  */
 public interface GoodJPA
         extends
-        JpaRepository<GoodEntity,Long>,
-        QuerydslPredicateExecutor<GoodEntity>
+        JpaRepository<GoodEntity,Long>
+//        QuerydslPredicateExecutor<GoodEntity>
 {
 
 }

@@ -9,10 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +24,7 @@ import java.util.UUID;
  * @description
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/api")
 public class IndexController {
 
     private final static Logger logger=LoggerFactory.getLogger(IndexController.class);
@@ -42,12 +39,13 @@ public class IndexController {
     public String main(){
         return "main";
     }
-    @RequestMapping("/index")
+    @RequestMapping(value = "/index/{number}")
     @ResponseBody
-    public String index(){
+    public String index(@PathVariable int number){
 //        logger.debug("访问了debug方法");
 //        logger.info("访问了info方法");
 //        logger.error("访问了error方法");
+        System.out.println(20/number);
         return "get index success";
     }
     @RequestMapping("/age")

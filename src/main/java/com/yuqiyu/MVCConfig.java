@@ -13,13 +13,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * 码云：http://git.oschina.net/jnyqy
  * ========================
  */
-@Configuration
+//@Configuration
 public class MVCConfig extends WebMvcConfigurerAdapter
 {
     //配置可以通过get形式访问
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/main").setViewName("main");
-    }
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        registry.addViewController("/login").setViewName("login");
+//        registry.addViewController("/main").setViewName("main");
+//    }
 }

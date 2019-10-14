@@ -4,7 +4,7 @@ import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.yuqiyu.lesson.Inquirer;
 import com.yuqiyu.lesson.entity.GoodEntity;
-import com.yuqiyu.lesson.entity.QGoodEntity;
+//import com.yuqiyu.lesson.entity.QGoodEntity;
 import com.yuqiyu.lesson.jpa.GoodJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,39 +35,39 @@ public class QueryController
     @PersistenceContext
     private EntityManager entityManager;
 
-    @RequestMapping(value = "/query")
-    public List<GoodEntity> list()
-    {
-        //querydsl查询实体
-        QGoodEntity _good = QGoodEntity.goodEntity;
-        //构建JPA查询对象
-        JPAQuery<GoodEntity> jpaQuery = new JPAQuery<>(entityManager);
-        //返回查询接口
-        return jpaQuery
-                //查询字段
-                .select(_good)
-                //查询表
-                .from(_good)
-                //查询条件
-                .where(_good.type.id.eq(Long.valueOf("1")))
-                //返回结果
-                .fetch();
-    }
+//    @RequestMapping(value = "/query")
+//    public List<GoodEntity> list()
+//    {
+//        //querydsl查询实体
+//        QGoodEntity _good = QGoodEntity.goodEntity;
+//        //构建JPA查询对象
+//        JPAQuery<GoodEntity> jpaQuery = new JPAQuery<>(entityManager);
+//        //返回查询接口
+//        return jpaQuery
+//                //查询字段
+//                .select(_good)
+//                //查询表
+//                .from(_good)
+//                //查询条件
+//                .where(_good.type.id.eq(Long.valueOf("1")))
+//                //返回结果
+//                .fetch();
+//    }
 
     /**
      * spring data jpa 整合querydsl完成查询
      * @return
      */
-    @RequestMapping(value = "/join")
-    public List<GoodEntity> join()
-    {
-        //querydsl查询实体
-        QGoodEntity _good = QGoodEntity.goodEntity;
-        //自定义查询对象
-        Inquirer inquirer = new Inquirer();
-        //添加查询条件
-        inquirer.putExpression(_good.type.id.eq(Long.valueOf("1")));
-        //返回查询结果
-        return inquirer.iteratorToList(goodJPA.findAll(inquirer.buidleQuery()));
-    }
+//    @RequestMapping(value = "/join")
+//    public List<GoodEntity> join()
+//    {
+//        //querydsl查询实体
+//        QGoodEntity _good = QGoodEntity.goodEntity;
+//        //自定义查询对象
+//        Inquirer inquirer = new Inquirer();
+//        //添加查询条件
+//        inquirer.putExpression(_good.type.id.eq(Long.valueOf("1")));
+//        //返回查询结果
+//        return inquirer.iteratorToList(goodJPA.findAll(inquirer.buidleQuery()));
+//    }
 }
